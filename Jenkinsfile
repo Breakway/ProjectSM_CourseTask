@@ -17,10 +17,10 @@ echo $PATH
 
     stage('Build') {
       steps {
-        sh '''cmake -S ./ -B out/build/;
-cd ./out/build;
-make;
-cd ../../;'''
+        sh '''/usr/local/bin/cmake -S ./ -B out/build/
+cd ./out/build/
+make
+cd ../../'''
       }
     }
 
