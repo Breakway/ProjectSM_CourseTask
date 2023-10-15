@@ -12,7 +12,7 @@ TEST(Hello, world) {
 
 TEST(Hello, world1) {
     std::cout << "New test with lib!" << std::endl;
-    EXPECT_EQ(Calculator::getNumberNine(), 12);
+    EXPECT_EQ(Calculator::getNumberNine(), 13);
 }
 
 int main(int argc, char** argv)
