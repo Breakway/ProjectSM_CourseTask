@@ -1,5 +1,5 @@
 #include "Example.hpp"
 
 int Calculator::getNumberNine() {
-    return 9;
+    return 11;
 }
