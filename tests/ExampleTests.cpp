@@ -12,7 +12,7 @@ TEST(Hello, world) {
 
 TEST(Hello, world1) {
     std::cout << "New test with lib abobus!" << std::endl;
-    EXPECT_EQ(Calculator::getNumberNine(), 15);
+    EXPECT_EQ(Calculator::getNumberNine(), 16);
 }
 
 int main(int argc, char** argv)
