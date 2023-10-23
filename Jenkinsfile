@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Checkout code') {
       steps {
-        git(url: 'https://github.com/NikitaKatechkin/ProjectSM_CourseTask.git', branch: 'main')
+        git(url: 'https://github.com/Breakway/ProjectSM_CourseTask.git', branch: 'main')
       }
     }
 
