@@ -9,24 +9,27 @@ pipeline {
 
     stage('Log') {
       steps {
-        bat 'direcho $PATH:git submodule update --init'
+        sh ''' ls-la;
+echo $PATH;
+git submodule update --init
+'''
       }
     }
 
     stage('Build') {
       steps {
-        bat '''
-/usr/local/bin/cmake -S ./ -B out/build/
-cd ./out/build/
-mingw32-make;
-cd ../../
+        sh '''
+/usr/local/bin/cmake -S ./ -B out/build/;
+cd ./out/build/;
+make;
+cd ../../;
 '''
       }
     }
 
     stage('Run Tests') {
       steps {
-        bat 'cd ./out/build/tests/ && ./ExampleTests && cd ../../../'
+        sh 'cd ./out/build/tests/ && ./ExampleTests && cd ../../../'
       }
     }
 
