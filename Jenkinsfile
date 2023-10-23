@@ -10,7 +10,8 @@ pipeline {
     stage('Log') {
       steps {
         sh ''' ls-la;
-echo $PATH;
+dir
+echo %PATH%
 git submodule update --init
 '''
       }
