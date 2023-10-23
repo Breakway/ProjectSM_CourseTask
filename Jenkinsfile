@@ -11,7 +11,7 @@ pipeline {
       steps {
         sh ''' ls-la;
 dir
-echo %PATH%
+echo $PATH
 git submodule update --init
 '''
       }
