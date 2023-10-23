@@ -9,7 +9,7 @@ pipeline {
 
     stage('Log') {
       steps {
-        bat 'bat \'\'\' echp %PATH% git submodule update --init \'\'\''
+        bat 'direcho $PATH:git submodule update --init'
       }
     }
 
