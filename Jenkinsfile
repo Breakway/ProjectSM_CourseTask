@@ -20,7 +20,7 @@ git submodule update --init
     stage('Build') {
       steps {
         bat '''
-"C:\Program Files\CMake\bin\cmake.exe" -S ./ -B out/build/
+/usr/local/bin/cmake -S ./ -B out/build/
 cd ./out/build/
 mingw32-make;
 cd ../../
