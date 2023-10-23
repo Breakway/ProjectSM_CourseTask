@@ -9,7 +9,8 @@ pipeline {
 
     stage('Log') {
       steps {
-        sh '''ls -la;
+        bat '''
+dir
 echo $PATH;
 git submodule update --init
 '''
@@ -18,16 +19,18 @@ git submodule update --init
 
     stage('Build') {
       steps {
-        sh '''/usr/local/bin/cmake -S ./ -B out/build/;
-cd ./out/build/;
-make;
-cd ../../;'''
+        bat '''
+"C:\Program Files\CMake\bin\cmake.exe" -S ./ -B out/build/
+cd ./out/build/
+mingw32-make;
+cd ../../
+'''
       }
     }
 
     stage('Run Tests') {
       steps {
-        sh 'cd ./out/build/tests/ && ./ExampleTests && cd ../../../'
+        bat 'cd ./out/build/tests/ && ./ExampleTests && cd ../../../'
       }
     }
 
